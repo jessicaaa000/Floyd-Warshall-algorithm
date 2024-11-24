@@ -1,0 +1,10 @@
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\bin\Debug\Floyd-Warshall.exe.config
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\bin\Debug\Floyd-Warshall.exe
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\bin\Debug\Floyd-Warshall.pdb
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd-Warshall.csproj.AssemblyReference.cache
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd_Warshall.Properties.Resources.resources
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd-Warshall.csproj.GenerateResource.cache
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd-Warshall.csproj.CoreCompileInputs.cache
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd-Warshall.exe
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd-Warshall.pdb
+C:\Users\jessi\source\repos\FloydWarshallAlgorithm\Floyd-Warshall\obj\Debug\Floyd_Warshall.Background.resources
