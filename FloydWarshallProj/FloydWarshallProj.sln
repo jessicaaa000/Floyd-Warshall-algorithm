@@ -1,14 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloydWarshallProj", "FloydWarshallProj\FloydWarshallProj.csproj", "{DCD9C351-80EE-486E-8882-434B0E2BAB8E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{07A63DB9-007B-4751-97D1-C9365176600B} = {07A63DB9-007B-4751-97D1-C9365176600B}
+		{3EE8586D-B47B-443B-AD01-87E9132A4918} = {3EE8586D-B47B-443B-AD01-87E9132A4918}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FloydWarshallAsm", "FloydWarshallAsm\FloydWarshallAsm.vcxproj", "{07A63DB9-007B-4751-97D1-C9365176600B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloydWarshallCs", "FloydWarshallCs\FloydWarshallCs.csproj", "{3EE8586D-B47B-443B-AD01-87E9132A4918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,18 @@ Global
 		{07A63DB9-007B-4751-97D1-C9365176600B}.Release|x64.Build.0 = Release|x64
 		{07A63DB9-007B-4751-97D1-C9365176600B}.Release|x86.ActiveCfg = Release|Win32
 		{07A63DB9-007B-4751-97D1-C9365176600B}.Release|x86.Build.0 = Release|Win32
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Debug|x64.Build.0 = Debug|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Debug|x86.Build.0 = Debug|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Release|x64.ActiveCfg = Release|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Release|x64.Build.0 = Release|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Release|x86.ActiveCfg = Release|Any CPU
+		{3EE8586D-B47B-443B-AD01-87E9132A4918}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

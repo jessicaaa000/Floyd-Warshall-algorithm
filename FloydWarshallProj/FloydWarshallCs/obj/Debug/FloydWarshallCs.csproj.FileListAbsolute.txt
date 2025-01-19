@@ -1,0 +1,6 @@
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallCs\bin\Debug\FloydWarshallCs.dll
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallCs\bin\Debug\FloydWarshallCs.pdb
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallCs\obj\Debug\FloydWarshallCs.csproj.AssemblyReference.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallCs\obj\Debug\FloydWarshallCs.csproj.CoreCompileInputs.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallCs\obj\Debug\FloydWarshallCs.dll
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallCs\obj\Debug\FloydWarshallCs.pdb

@@ -1,4 +1,4 @@
 ﻿  Assembling FloydWarshallAsm.asm...
-     Trwa tworzenie biblioteki C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.lib i obiektu C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.exp
-FloydWarshallAsm.exp : warning LNK4070: /OUT: dyrektywa JAAsm.dll w pliku .EXP jest inna niż nazwa pliku wyjściowego „C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll”; dyrektywa została zignorowana
-  FloydWarshallAsm.vcxproj -> C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll
+     Trwa tworzenie biblioteki C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.lib i obiektu C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.exp
+FloydWarshallAsm.exp : warning LNK4070: /OUT: dyrektywa JAAsm.dll w pliku .EXP jest inna niż nazwa pliku wyjściowego „C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll”; dyrektywa została zignorowana
+  FloydWarshallAsm.vcxproj -> C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll

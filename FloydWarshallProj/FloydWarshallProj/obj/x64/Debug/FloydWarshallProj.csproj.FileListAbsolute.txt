@@ -8,3 +8,16 @@ C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallP
 C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.exe
 C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.pdb
 C:\Users\jessi\Desktop\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.Background.resources
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\x64\Debug\FloydWarshallProj.exe.config
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\x64\Debug\FloydWarshallProj.exe
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\x64\Debug\FloydWarshallProj.pdb
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.csproj.AssemblyReference.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.Background.resources
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.Properties.Resources.resources
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.csproj.GenerateResource.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.csproj.CoreCompileInputs.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.exe
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWarshallProj.pdb
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\x64\Debug\FloydWarshallCs.dll
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\x64\Debug\FloydWarshallCs.pdb
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\x64\Debug\FloydWar.64E50A82.Up2Date

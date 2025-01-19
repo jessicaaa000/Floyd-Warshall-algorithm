@@ -99,5 +99,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FloydWarshallCs\FloydWarshallCs.csproj">
+      <Project>{3ee8586d-b47b-443b-ad01-87e9132a4918}</Project>
+      <Name>FloydWarshallCs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
