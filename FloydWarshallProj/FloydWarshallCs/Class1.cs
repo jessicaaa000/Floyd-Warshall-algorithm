@@ -13,22 +13,27 @@ namespace FloydWarshallCs
         public int[] CalculateRowForK(int[] row, int[] kRow, int k, int numberOfVertices)
         {
             int[] newRow = new int[numberOfVertices];
-            Array.Copy(row, newRow, numberOfVertices);
+            Array.Copy(row, newRow, numberOfVertices);  //newRow to nasz rzad ktory bedzie zmieniany
 
             for (int j = 0; j < numberOfVertices; j++)
             {
-                if (row[k] != int.MaxValue && kRow[j] != int.MaxValue)
+                if (j != k) //bo to sie nie zmieni
                 {
-                    int potentialNewPath = row[k] + kRow[j];
-                    if (potentialNewPath < row[j])
+                    if (row[k] != int.MaxValue && kRow[j] != int.MaxValue)
                     {
-                        newRow[j] = potentialNewPath;
+                        int potentialNewPath = row[k] + kRow[j];
+                        if (potentialNewPath < row[j])
+                        {
+                            newRow[j] = potentialNewPath;
+                        }
                     }
                 }
             }
 
             return newRow;
         }
+
+
 
         // Inicjalizuje rząd macierzy dla danego wierzchołka
         public int[] InitializeRow(int vertex, int numberOfVertices)
