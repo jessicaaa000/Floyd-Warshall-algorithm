@@ -7,85 +7,38 @@ using System.IO;
 
 namespace FloydWarshallCs
 {
-    public class FloydWarshall
+    public class FloydWarshallCalculator
     {
-        private int[,] distanceMatrix;
-        private int numberOfVertices;
-
-        public FloydWarshall(int numberOfVertices)
+        // Oblicza jeden rząd macierzy dla danej iteracji k
+        public int[] CalculateRowForK(int[] row, int[] kRow, int k, int numberOfVertices)
         {
-            this.numberOfVertices = numberOfVertices;
-            distanceMatrix = new int[numberOfVertices, numberOfVertices];
+            int[] newRow = new int[numberOfVertices];
+            Array.Copy(row, newRow, numberOfVertices);
 
-            // Initialize the distance matrix with maximum values
-            for (int i = 0; i < numberOfVertices; i++)
+            for (int j = 0; j < numberOfVertices; j++)
             {
-                for (int j = 0; j < numberOfVertices; j++)
+                if (row[k] != int.MaxValue && kRow[j] != int.MaxValue)
                 {
-                    if (i == j)
-                        distanceMatrix[i, j] = 0;
-                    else
-                        distanceMatrix[i, j] = int.MaxValue;
-                }
-            }
-        }
-
-        public void LoadDataFromFile(string filePath)
-        {
-            try
-            {
-                string[] lines = File.ReadAllLines(filePath);
-
-                foreach (var line in lines)
-                {
-                    string[] values = line.Split(' ').Select(v => v.Trim()).ToArray();
-                    if (values.Length == 3)
+                    int potentialNewPath = row[k] + kRow[j];
+                    if (potentialNewPath < row[j])
                     {
-                        int from = int.Parse(values[0]) - 1; // Adjusting to zero-based indexing
-                        int to = int.Parse(values[1]) - 1;
-                        int weight = int.Parse(values[2]);
-
-                        distanceMatrix[from, to] = weight;
+                        newRow[j] = potentialNewPath;
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error reading file: {ex.Message}");
-            }
+
+            return newRow;
         }
 
-        public void ComputeShortestPaths()
+        // Inicjalizuje rząd macierzy dla danego wierzchołka
+        public int[] InitializeRow(int vertex, int numberOfVertices)
         {
-            for (int k = 0; k < numberOfVertices; k++)
+            int[] row = new int[numberOfVertices];
+            for (int j = 0; j < numberOfVertices; j++)
             {
-                for (int i = 0; i < numberOfVertices; i++)
-                {
-                    for (int j = 0; j < numberOfVertices; j++)
-                    {
-                        if (distanceMatrix[i, k] != int.MaxValue && distanceMatrix[k, j] != int.MaxValue)
-                        {
-                            distanceMatrix[i, j] = Math.Min(distanceMatrix[i, j], distanceMatrix[i, k] + distanceMatrix[k, j]);
-                        }
-                    }
-                }
+                row[j] = vertex == j ? 0 : int.MaxValue;
             }
-        }
-
-        public void PrintDistanceMatrix()
-        {
-            Console.WriteLine("Shortest distance matrix:");
-            for (int i = 0; i < numberOfVertices; i++)
-            {
-                for (int j = 0; j < numberOfVertices; j++)
-                {
-                    if (distanceMatrix[i, j] == int.MaxValue)
-                        Console.Write("INF\t");
-                    else
-                        Console.Write($"{distanceMatrix[i, j]}\t");
-                }
-                Console.WriteLine();
-            }
+            return row;
         }
     }
 }
