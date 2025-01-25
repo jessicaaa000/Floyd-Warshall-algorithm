@@ -10,7 +10,7 @@ namespace FloydWarshallCs
     public class FloydWarshallCalculator
     {
         // Oblicza jeden rząd macierzy dla danej iteracji k
-        public int[] CalculateRowForK(int[] row, int[] kRow, int k, int numberOfVertices)
+        public int[] CalculateRowForKCs(int[] row, int[] kRow, int k, int numberOfVertices)
         {
             int[] newRow = new int[numberOfVertices];
             Array.Copy(row, newRow, numberOfVertices);  //newRow to nasz rzad ktory bedzie zmieniany
@@ -36,12 +36,12 @@ namespace FloydWarshallCs
 
 
         // Inicjalizuje rząd macierzy dla danego wierzchołka
-        public int[] InitializeRow(int vertex, int numberOfVertices)
+        public int[] InitializeRowCs(int rowNumber, int numberOfVertices)
         {
             int[] row = new int[numberOfVertices];
             for (int j = 0; j < numberOfVertices; j++)
             {
-                row[j] = vertex == j ? 0 : int.MaxValue;
+                row[j] = rowNumber == j ? 0 : int.MaxValue;
             }
             return row;
         }
