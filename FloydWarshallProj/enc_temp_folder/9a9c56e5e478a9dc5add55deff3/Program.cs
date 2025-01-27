@@ -218,7 +218,6 @@ namespace FloydWarshallProj
             //LoadDataFromFile(filePath, ref distanceMatrixAsm);
 
             // Mierzenie czasu obliczeń
-            // Mierzenie czasu obliczeń
             Stopwatch computeTimeAsm = new Stopwatch();
             computeTimeAsm.Start();
 
