@@ -186,19 +186,24 @@ namespace FloydWarshallProj
                                 lock (_matrixLock)
                                 {
                                     // Alokujemy pamięć o rozmiarze: wierzcholki + 16(to dla datat alignemnt w instrukcjach SSE
-                                    IntPtr rawPointer = Marshal.AllocHGlobal((vertices + 16) * sizeof(int) + 16); //dodajemy 3 jeszcze gdyby przy instrukcjach wektorowych wyszlo poza zakres
+                                    IntPtr rawPointer = Marshal.AllocHGlobal((vertices + 16) * sizeof(int) + 32); //dodajemy 3 jeszcze gdyby przy instrukcjach wektorowych wyszlo poza zakres
 
                                     // Obliczamy adres wyrównany do 16 bajtów
                                     long rawAddress = rawPointer.ToInt64();
                                     long alignedAddress = (rawAddress + (16 - 1)) & ~(16 - 1);
                                     IntPtr alignedPointer = new IntPtr(alignedAddress);
                                     int* address = (int*)alignedPointer;
-                                    Console.WriteLine($"Wskaźnik address (hex): {((IntPtr)address).ToString("X")}");
+                                    //Console.WriteLine($"Wskaźnik address (hex): {((IntPtr)address).ToString("X")}");
+                                    //Console.WriteLine($"Wskaźnik poczatku tablicy- WARTOSC (hex): {*address}");
                                     InitializeRowAsm(row, vertices, address); // Inicjalizacja w Asm
+                                    //Console.WriteLine($"Wskaźnik poczatku tablicy- WARTOSC (hex): {*address}");
                                     for (int j = 0; j < vertices; j++)
                                     {
-                                        //distanceMatrixCs[row, j] = rowData[j]; - wpisanie ddanych do tablicy
+                                        //Console.WriteLine($"wskaznik wartosc: {((IntPtr)address).ToString("X")}");
+                                        distanceMatrixAsm[row, j] = *(address + j);
+                                        Console.WriteLine($"wartosc tablica: {distanceMatrixAsm[row, j]}");
                                     }
+                                    Console.WriteLine($"--------------: {row}");
                                 }
                             }
                         }

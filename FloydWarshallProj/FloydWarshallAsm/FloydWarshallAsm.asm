@@ -22,7 +22,7 @@ InitializeLoop:
 
 End_InitializeRow:
     mov RAX, R9   ;bedziemy zwracac wskaznik do rzedu - ej ale to rownie dobrze moze chyba na stosie byc bo potem w c# bedzie niszczone - chociaz trzeba sie zastanwoic
-    mov DWORD PTR [R9+RCX], 0
+    mov DWORD PTR [R9+4*RCX], 0
 
 ret 
 InitializeRowAsm endp 
