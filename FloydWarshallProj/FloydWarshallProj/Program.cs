@@ -347,7 +347,7 @@ namespace FloydWarshallProj
             {
                 for (int j = 0; j < vertices; j++)
                 {
-                    if (matrix[i, j] >= int.MaxValue)
+                    if (matrix[i, j] >= 268435455)
                         Console.Write("INF\t");
                     else
                         Console.Write($"{matrix[i, j]}\t");

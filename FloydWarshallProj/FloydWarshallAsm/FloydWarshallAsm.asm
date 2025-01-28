@@ -21,7 +21,6 @@ InitializeLoop:
     jmp InitializeLoop            ; Powróæ do pocz¹tku pêtli
 
 End_InitializeRow:
-    mov RAX, R9   ;bedziemy zwracac wskaznik do rzedu
     mov DWORD PTR [R9+4*RCX], 0
 
 ret 
@@ -33,17 +32,37 @@ InitializeRowAsm endp
 ;4 arg = vertices - R9
 ;5 address
 CalculateRowForKAsm proc
+
 mov r10, [rsp + 40] ; bierzemy 5 arg ze stosu, czyli address
+mov RAX, R9   ;dajemy do RAX wierzcholki
+mov R12, 0                  ; potem bedziemy za pomoca rejestru R12 sprawdzali czy juz w rzedzie jest tyle elementow ile wierzcholkow w grafie
 mov r11d, [RCX+4*R8]  ;tu jest od teraz nasza wartosc przez ktora sprawdzamy krotsze sciezki (row[k])
+
+MainLoop:
+;cmp rax, 1
+;je IS_ONE
+
 movups xmm1, [RDX]  ;zapisujemy do xmm1 rzad, ktory bedzie sluzyc do obliczania posrednich wierzcholkow
 movd xmm2, r11d
 VPBROADCASTD xmm2, xmm2 ;wartosc przez ktora sprawdzamy krotsze odcinki
 addps xmm2, xmm1   ; teraz w xmm2 mamy sumy odcinkow przez posredni wierzcholek
 movups xmm3, [RCX]  ;zapisujemy teraz do xmm3 wierzcholek, ktory bedzie zmieniany
-;cmpunordps xmm3, xmm3
 minps xmm3, xmm2
 movaps [r10], xmm3
-mov rax, [r10]
+add R12, 4 ;zwiekszamy liczbe przetworzonych wierzcholkow o 4
+add r10, 16
+add RDX, 16
+add RCX, 16
+sub RAX, R12
+JLE EndCalculateRow
+jmp MainLoop            ; Powróæ do pocz¹tku pêtli
+
+;IS_ONE:
+;mov R14d, [EDX]  ;rzad do obliczania
+
+
+
+EndCalculateRow:
 
 ret 
 CalculateRowForKAsm endp 
