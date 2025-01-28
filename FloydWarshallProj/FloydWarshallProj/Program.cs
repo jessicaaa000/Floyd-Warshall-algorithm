@@ -167,7 +167,7 @@ namespace FloydWarshallProj
 
             // Mierzenie czasu inicjalizacji
             Stopwatch initTimeAsm = new Stopwatch();
-            initTimeCs.Start();
+            initTimeAsm.Start();
 
 
             Thread[] initThreadsAsm = new Thread[numOfThreads];
@@ -201,9 +201,7 @@ namespace FloydWarshallProj
                                     {
                                         //Console.WriteLine($"wskaznik wartosc: {((IntPtr)address).ToString("X")}");
                                         distanceMatrixAsm[row, j] = *(address + j);
-                                        Console.WriteLine($"wartosc tablica: {distanceMatrixAsm[row, j]}");
                                     }
-                                    Console.WriteLine($"--------------: {row}");
                                 }
                             }
                         }
@@ -212,7 +210,7 @@ namespace FloydWarshallProj
                 }
             }
 
-            foreach (Thread thread in initThreadsCs)
+            foreach (Thread thread in initThreadsAsm)
             {
                 thread.Join();
             }
@@ -220,7 +218,7 @@ namespace FloydWarshallProj
             initTimeAsm.Stop();
             Console.WriteLine($"Czas inicjalizacji macierzy w Asm: {initTimeAsm.ElapsedMilliseconds} ms");
 
-            //LoadDataFromFile(filePath, ref distanceMatrixAsm);
+            LoadDataFromFile(filePath, ref distanceMatrixAsm);
 
             // Mierzenie czasu obliczeń
             // Mierzenie czasu obliczeń
@@ -247,7 +245,7 @@ namespace FloydWarshallProj
                                 if (i != currentK) // Sprawdzamy, czy nie obliczamy wiersza, który jest równy k - nie ma takiej potrzeby bo te dane sie nie zmienia
                                 {
                                     int[] rowData = GetRow(distanceMatrixAsm, i); // wyciagamy wiersz o aktualnym i
-                                    //int[] newRow = calculatorCs.CalculateRowForK(rowData, kRow, currentK, vertices);  //sprawdzamy czy przez wierzcholek k sa krotsze drogi - OBLICZENIA ASM
+                                    //CalculateRowForKAsm(rowData, kRow, currentK, vertices);  //sprawdzamy czy przez wierzcholek k sa krotsze drogi - OBLICZENIA ASM
 
                                     lock (_matrixLock)
                                     {
