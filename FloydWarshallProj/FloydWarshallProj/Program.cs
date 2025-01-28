@@ -19,10 +19,10 @@ namespace FloydWarshallProj
         /// </summary>
 
         [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll")]
-        static extern unsafe int InitializeRowAsm(int a, int b, int* d);
+        static extern unsafe int InitializeRowAsm(int row, int vertices, int* address);
 
         [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll")]
-        static extern int CalculateRowForKAsm(int c, int d);
+        static extern unsafe int CalculateRowForKAsm(int* row, int* kRow, int k, int vertices, int* address);
 
         private static object _matrixLock = new object();
 
@@ -33,7 +33,7 @@ namespace FloydWarshallProj
             //int val2 = CalculateRowForKAsm(x, y);
 
             //DANE - do asm i do c#
-            int vertices = 8;
+            int vertices = 5;
             int numOfThreads = 2;
             int[,] distanceMatrixCs = new int[vertices, vertices];
             int[,] distanceMatrixAsm = new int[vertices, vertices];
@@ -193,13 +193,9 @@ namespace FloydWarshallProj
                                     long alignedAddress = (rawAddress + (16 - 1)) & ~(16 - 1);
                                     IntPtr alignedPointer = new IntPtr(alignedAddress);
                                     int* address = (int*)alignedPointer;
-                                    //Console.WriteLine($"Wskaźnik address (hex): {((IntPtr)address).ToString("X")}");
-                                    //Console.WriteLine($"Wskaźnik poczatku tablicy- WARTOSC (hex): {*address}");
                                     InitializeRowAsm(row, vertices, address); // Inicjalizacja w Asm
-                                    //Console.WriteLine($"Wskaźnik poczatku tablicy- WARTOSC (hex): {*address}");
                                     for (int j = 0; j < vertices; j++)
                                     {
-                                        //Console.WriteLine($"wskaznik wartosc: {((IntPtr)address).ToString("X")}");
                                         distanceMatrixAsm[row, j] = *(address + j);
                                     }
                                 }
@@ -219,6 +215,7 @@ namespace FloydWarshallProj
             Console.WriteLine($"Czas inicjalizacji macierzy w Asm: {initTimeAsm.ElapsedMilliseconds} ms");
 
             LoadDataFromFile(filePath, ref distanceMatrixAsm);
+            PrintDistanceMatrix(distanceMatrixAsm);
 
             // Mierzenie czasu obliczeń
             // Mierzenie czasu obliczeń
@@ -232,37 +229,58 @@ namespace FloydWarshallProj
                 int currentK = k;                            //wierzcholek przez ktory sprawdzamy droge
 
                 // Tworzenie wątków dla każdego wiersza w danej iteracji k
-                Thread[] computeThreads = new Thread[numOfThreads];
-                for (int threadId = 0; threadId < numOfThreads; threadId++)
-                {
-                    int currentThread = threadId;
-                    computeThreads[threadId] = new Thread(() =>
-                    {
-                        for (int i = 0; i < vertices; i++)
-                        {
-                            if (i % numOfThreads == currentThread) // Warunek przydziału wiersza do wątku
-                            {
-                                if (i != currentK) // Sprawdzamy, czy nie obliczamy wiersza, który jest równy k - nie ma takiej potrzeby bo te dane sie nie zmienia
-                                {
-                                    int[] rowData = GetRow(distanceMatrixAsm, i); // wyciagamy wiersz o aktualnym i
-                                    //CalculateRowForKAsm(rowData, kRow, currentK, vertices);  //sprawdzamy czy przez wierzcholek k sa krotsze drogi - OBLICZENIA ASM
+                Thread[] computeThreadsAsm = new Thread[numOfThreads];
 
-                                    lock (_matrixLock)
+                unsafe
+                {
+                    for (int threadId = 0; threadId < numOfThreads; threadId++)
+                    {
+                        int currentThread = threadId;
+                        computeThreadsAsm[threadId] = new Thread(() =>
+                        {
+                            for (int i = 0; i < vertices; i++)
+                            {
+                                if (i % numOfThreads == currentThread) // Warunek przydziału wiersza do wątku
+                                {
+                                    if (i != currentK) // Sprawdzamy, czy nie obliczamy wiersza, który jest równy k - nie ma takiej potrzeby bo te dane sie nie zmienia
                                     {
-                                        for (int j = 0; j < vertices; j++)
+                                        lock (_matrixLock)
                                         {
-                                            //distanceMatrixAsm[i, j] = newRow[j]; - uzupelnic jak tamto bedzie policzone
+                                            // Alokujemy pamięć o rozmiarze: wierzcholki + 16(to dla datat alignemnt w instrukcjach SSE
+                                            IntPtr rawPointer = Marshal.AllocHGlobal((vertices + 16) * sizeof(int) + 32); //dodajemy 3 jeszcze gdyby przy instrukcjach wektorowych wyszlo poza zakres
+
+                                            // Obliczamy adres wyrównany do 16 bajtów
+                                            long rawAddress = rawPointer.ToInt64();
+                                            long alignedAddress = (rawAddress + (16 - 1)) & ~(16 - 1);
+                                            IntPtr alignedPointer = new IntPtr(alignedAddress);
+                                            int* address = (int*)alignedPointer;
+                                            //int*[] rowData = &GetRow(distanceMatrixAsm, i); // wyciagamy wiersz o aktualnym i
+                                            fixed (int* matrixPtr = &distanceMatrixAsm[0, 0])
+                                            {
+                                                int* rowPtr = matrixPtr + (i * vertices);
+                                                int* kRowPtr = matrixPtr + (currentK * vertices);
+                                                Console.WriteLine($"k: {currentK}, current row: {i}, Value at rowPtr: 0x{(long)rowPtr:X}");
+                                                Console.WriteLine($"Value at kRowPtr: 0x{(long)kRowPtr:X}");
+                                                Console.WriteLine($"address: 0x{(long)address:X}");
+                                                //Console.WriteLine($"k: {currentK}, current row: {i}, Value at rowPtr: {rowPtr}");
+                                                Console.WriteLine($"Value at kRowPtr: {*kRowPtr}");
+                                                CalculateRowForKAsm(rowPtr, kRowPtr, currentK, vertices, address);  //sprawdzamy czy przez wierzcholek k sa krotsze drogi - OBLICZENIA ASM
+                                            }
+                                                for (int j = 0; j < vertices; j++)
+                                            {
+                                                distanceMatrixAsm[i, j] = *(address + j);
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }
-                    });
-                    computeThreads[threadId].Start();
+                        });
+                        computeThreadsAsm[threadId].Start();
+                    }
                 }
 
                 // Czekanie na zakończenie obliczeń dla danej iteracji k
-                foreach (Thread thread in computeThreads)
+                foreach (Thread thread in computeThreadsAsm)
                 {
                     thread.Join();
                 }
