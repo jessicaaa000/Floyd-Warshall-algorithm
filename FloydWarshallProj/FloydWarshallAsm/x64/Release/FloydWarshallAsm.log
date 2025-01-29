@@ -1,0 +1,7 @@
+﻿  Assembling FloydWarshallAsm.asm...
+LINK : warning LNK4075: zignorowano opcję „/INCREMENTAL” z powodu określenia opcji „/LTCG”
+     Trwa tworzenie biblioteki C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.lib i obiektu C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.exp
+FloydWarshallAsm.exp : warning LNK4070: /OUT: dyrektywa JAAsm.dll w pliku .EXP jest inna niż nazwa pliku wyjściowego „C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll”; dyrektywa została zignorowana
+  LINK : określono opcję /LTCG, lecz generowanie kodu nie było wymagane; usuń opcję /LTCG z wiersza polecenia konsolidatora w celu podwyższenia wydajności konsolidatora
+FloydWarshallAsm.exp : warning LNK4070: /OUT: dyrektywa JAAsm.dll w pliku .EXP jest inna niż nazwa pliku wyjściowego „C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll”; dyrektywa została zignorowana
+  FloydWarshallAsm.vcxproj -> C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll

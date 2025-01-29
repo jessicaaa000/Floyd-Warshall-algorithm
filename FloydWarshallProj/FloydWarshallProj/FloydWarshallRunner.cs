@@ -13,10 +13,10 @@ namespace FloydWarshallProj
 {
     internal class FloydWarshallRunner
     {
-        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll")]
+        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll")]
         static extern unsafe int InitializeRowAsm(int row, int vertices, int* address);
 
-        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll")]
+        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll")]
         static extern unsafe int CalculateRowForKAsm(int* row, int* kRow, int k, int vertices, int* address);
 
         private static object _matrixLock = new object();

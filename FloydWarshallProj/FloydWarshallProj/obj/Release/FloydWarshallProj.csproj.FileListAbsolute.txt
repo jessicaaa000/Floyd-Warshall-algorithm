@@ -1,0 +1,13 @@
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\Release\FloydWarshallProj.exe.config
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\Release\FloydWarshallProj.exe
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\Release\FloydWarshallProj.pdb
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\Release\FloydWarshallCs.dll
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\Release\FloydWarshallCs.pdb
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.csproj.AssemblyReference.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.Background.resources
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.Properties.Resources.resources
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.csproj.GenerateResource.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.csproj.CoreCompileInputs.cache
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWar.64E50A82.Up2Date
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.exe
+C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\obj\Release\FloydWarshallProj.pdb

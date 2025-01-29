@@ -6,6 +6,8 @@ MaxValue dd 0FFFFFFFh
 ;3 arg = R8 - address where there is the first table elem
 .code 
 InitializeRowAsm proc 
+
+push R10
 VPBROADCASTD xmm1, [MaxValue] 
 
     mov RAX, RDX
@@ -22,6 +24,8 @@ InitializeLoop:
 
 End_InitializeRow:
     mov DWORD PTR [R9+4*RCX], 0
+    pop R10
+
 
 ret 
 InitializeRowAsm endp 
@@ -32,8 +36,10 @@ InitializeRowAsm endp
 ;4 arg = vertices - R9
 ;5 address
 CalculateRowForKAsm proc
-
 mov r10, [rsp + 40] ; bierzemy 5 arg ze stosu, czyli address
+push RAX
+push R12
+push R11
 mov RAX, R9   ;dajemy do RAX wierzcholki
 mov R12, 0                  ; potem bedziemy za pomoca rejestru R12 sprawdzali czy juz w rzedzie jest tyle elementow ile wierzcholkow w grafie
 mov r11d, [RCX+4*R8]  ;tu jest od teraz nasza wartosc przez ktora sprawdzamy krotsze sciezki (row[k])
@@ -55,12 +61,10 @@ sub RAX, R12
 JLE EndCalculateRow
 jmp MainLoop            ; Powróæ do pocz¹tku pêtli
 
-;IS_ONE:
-;mov R14d, [EDX]  ;rzad do obliczania
-
-
-
 EndCalculateRow:
+pop R11
+pop R12
+pop RAX
 
 ret 
 CalculateRowForKAsm endp 
