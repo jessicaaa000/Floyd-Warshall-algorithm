@@ -39,16 +39,14 @@ mov R12, 0                  ; potem bedziemy za pomoca rejestru R12 sprawdzali c
 mov r11d, [RCX+4*R8]  ;tu jest od teraz nasza wartosc przez ktora sprawdzamy krotsze sciezki (row[k])
 
 MainLoop:
-;cmp rax, 1
-;je IS_ONE
 
-movups xmm1, [RDX]  ;zapisujemy do xmm1 rzad, ktory bedzie sluzyc do obliczania posrednich wierzcholkow
+MOVDQU xmm1, [RDX]  ;zapisujemy do xmm1 rzad, ktory bedzie sluzyc do obliczania posrednich wierzcholkow
 movd xmm2, r11d
 VPBROADCASTD xmm2, xmm2 ;wartosc przez ktora sprawdzamy krotsze odcinki
-addps xmm2, xmm1   ; teraz w xmm2 mamy sumy odcinkow przez posredni wierzcholek
-movups xmm3, [RCX]  ;zapisujemy teraz do xmm3 wierzcholek, ktory bedzie zmieniany
-minps xmm3, xmm2
-movaps [r10], xmm3
+PADDD xmm2, xmm1   ; teraz w xmm2 mamy sumy odcinkow przez posredni wierzcholek
+MOVDQU xmm3, [RCX]  ;zapisujemy teraz do xmm3 wierzcholek, ktory bedzie zmieniany
+pminsd xmm3, xmm2
+MOVDQA [r10], xmm3
 add R12, 4 ;zwiekszamy liczbe przetworzonych wierzcholkow o 4
 add r10, 16
 add RDX, 16
