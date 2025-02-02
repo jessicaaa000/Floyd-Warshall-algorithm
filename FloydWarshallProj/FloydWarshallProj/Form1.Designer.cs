@@ -1,4 +1,6 @@
-﻿namespace FloydWarshallProj
+﻿using System;
+
+namespace FloydWarshallProj
 {
     partial class Background
     {
@@ -91,7 +93,7 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(951, 45);
             this.trackBar1.TabIndex = 0;
-            this.trackBar1.Value = 2;
+            this.trackBar1.Value = Environment.ProcessorCount;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // listBox1
@@ -112,7 +114,7 @@
             this.labelThreads.Name = "labelThreads";
             this.labelThreads.Size = new System.Drawing.Size(58, 13);
             this.labelThreads.TabIndex = 1;
-            this.labelThreads.Text = "Threads: 1";
+            this.labelThreads.Text = "Threads: "+Environment.ProcessorCount;
             this.labelThreads.Click += new System.EventHandler(this.labelThreads_Click);
             // 
             // labelFilePath
@@ -164,7 +166,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(229, 16);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Liczba procesorów logicznych: x";
+            this.label3.Text = "Liczba procesorów logicznych: "+ Environment.ProcessorCount;
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // Background

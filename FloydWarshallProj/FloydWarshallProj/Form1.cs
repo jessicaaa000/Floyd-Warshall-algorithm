@@ -12,6 +12,7 @@ namespace FloydWarshallProj
     public partial class Background : Form
     {
         private int numOfThreads = Environment.ProcessorCount;
+        private int numOfProcessors = Environment.ProcessorCount;
         public Background()
         {
             InitializeComponent();
@@ -26,9 +27,6 @@ namespace FloydWarshallProj
 
         private void buttonCSharp_Click(object sender, EventArgs e)
         {
-            // Pobierz liczbę dostępnych wątków (procesorów logicznych)
-            int numOfThreads = Environment.ProcessorCount;
-
             // Pobranie katalogu, w którym znajduje się plik wykonywalny (.exe)
             string binDir = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -37,15 +35,12 @@ namespace FloydWarshallProj
 
             // Pobieramy nazwę pliku wybranego w ComboBox
             string selectedFileName = this.comboBoxFilePath.Text;
-
             // Tworzymy pełną ścieżkę do pliku
             string filePath = Path.Combine(testFolderDir, selectedFileName);
             FloydWarshallRunner runner = new FloydWarshallRunner();
-            label3.Text = "Liczba procesorów logicznych: " + numOfThreads.ToString();
+            label3.Text = "Liczba procesorów logicznych: " + numOfProcessors.ToString();
             // Teraz wywołujemy metodę na obiekcie klasy
             runner.RunFloydWarshallCSharp(numOfThreads, filePath);
-            trackBar1.Value = numOfThreads;
-            labelThreads.Text = "Threads: " + numOfThreads;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,8 +69,8 @@ namespace FloydWarshallProj
 
         private void buttonAsm_Click(object sender, EventArgs e)
         {
-            // Pobierz liczbę dostępnych wątków (procesorów logicznych)
-            int numOfThreads = Environment.ProcessorCount;
+            // Pobierz liczbę wątków
+            int numOfThreads = trackBar1.Value;
             // Pobranie katalogu, w którym znajduje się plik wykonywalny (.exe)
             string binDir = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -87,7 +82,7 @@ namespace FloydWarshallProj
             // Tworzymy pełną ścieżkę do pliku
             string filePath = Path.Combine(testFolderDir, selectedFileName);
             FloydWarshallRunner runner = new FloydWarshallRunner();
-            label3.Text = "Liczba procesorów logicznych: " + numOfThreads.ToString();
+            label3.Text = "Liczba procesorów logicznych: " + numOfProcessors.ToString();
             // Teraz wywołujemy metodę na obiekcie klasy
             runner.RunFloydWarshallAsm(numOfThreads, filePath);
         }
