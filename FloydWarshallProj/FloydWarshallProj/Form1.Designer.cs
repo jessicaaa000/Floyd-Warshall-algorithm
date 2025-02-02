@@ -45,15 +45,14 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.title.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.title.BackColor = System.Drawing.Color.Thistle;
             this.title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.title.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(40, 16);
+            this.title.Location = new System.Drawing.Point(337, 34);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
             this.title.Padding = new System.Windows.Forms.Padding(4);
-            this.title.Size = new System.Drawing.Size(566, 38);
+            this.title.Size = new System.Drawing.Size(564, 36);
             this.title.TabIndex = 0;
             this.title.Text = "This app implements Floyd-Warshall algorithm.\r\n";
             this.title.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -62,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 79);
+            this.label1.Location = new System.Drawing.Point(356, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(527, 14);
@@ -75,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(179, 102);
+            this.label2.Location = new System.Drawing.Point(493, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(272, 14);
@@ -86,39 +85,40 @@
             // trackBar1
             // 
             this.trackBar1.LargeChange = 4;
-            this.trackBar1.Location = new System.Drawing.Point(80, 238);
+            this.trackBar1.Location = new System.Drawing.Point(234, 307);
             this.trackBar1.Maximum = 64;
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(430, 45);
+            this.trackBar1.Size = new System.Drawing.Size(951, 45);
             this.trackBar1.TabIndex = 0;
             this.trackBar1.Value = 2;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.listBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(40, 288);
+            this.listBox1.Location = new System.Drawing.Point(122, 357);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(878, 394);
+            this.listBox1.Size = new System.Drawing.Size(1063, 355);
             this.listBox1.TabIndex = 8;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // labelThreads
             // 
             this.labelThreads.AutoSize = true;
-            this.labelThreads.Location = new System.Drawing.Point(516, 247);
+            this.labelThreads.Location = new System.Drawing.Point(146, 307);
             this.labelThreads.Name = "labelThreads";
             this.labelThreads.Size = new System.Drawing.Size(58, 13);
             this.labelThreads.TabIndex = 1;
             this.labelThreads.Text = "Threads: 1";
+            this.labelThreads.Click += new System.EventHandler(this.labelThreads_Click);
             // 
             // labelFilePath
             // 
             this.labelFilePath.AutoSize = true;
-            this.labelFilePath.Location = new System.Drawing.Point(40, 150);
+            this.labelFilePath.Location = new System.Drawing.Point(339, 163);
             this.labelFilePath.Name = "labelFilePath";
             this.labelFilePath.Size = new System.Drawing.Size(67, 13);
             this.labelFilePath.TabIndex = 10;
@@ -127,16 +127,16 @@
             // comboBoxFilePath
             // 
             this.comboBoxFilePath.FormattingEnabled = true;
-            this.comboBoxFilePath.Location = new System.Drawing.Point(141, 147);
+            this.comboBoxFilePath.Location = new System.Drawing.Point(412, 160);
             this.comboBoxFilePath.Name = "comboBoxFilePath";
-            this.comboBoxFilePath.Size = new System.Drawing.Size(298, 21);
+            this.comboBoxFilePath.Size = new System.Drawing.Size(471, 21);
             this.comboBoxFilePath.TabIndex = 14;
             // 
             // buttonCSharp
             // 
-            this.buttonCSharp.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonCSharp.BackColor = System.Drawing.Color.Plum;
             this.buttonCSharp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.buttonCSharp.Location = new System.Drawing.Point(141, 202);
+            this.buttonCSharp.Location = new System.Drawing.Point(656, 209);
             this.buttonCSharp.Name = "buttonCSharp";
             this.buttonCSharp.Size = new System.Drawing.Size(150, 30);
             this.buttonCSharp.TabIndex = 12;
@@ -146,9 +146,9 @@
             // 
             // buttonAsm
             // 
-            this.buttonAsm.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonAsm.BackColor = System.Drawing.Color.Plum;
             this.buttonAsm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
-            this.buttonAsm.Location = new System.Drawing.Point(321, 202);
+            this.buttonAsm.Location = new System.Drawing.Point(479, 209);
             this.buttonAsm.Name = "buttonAsm";
             this.buttonAsm.Size = new System.Drawing.Size(150, 30);
             this.buttonAsm.TabIndex = 13;
@@ -159,18 +159,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(640, 145);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(536, 268);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 20);
+            this.label3.Size = new System.Drawing.Size(229, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "Liczba procesorów logicznych: x";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // Background
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(1321, 800);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxFilePath);
