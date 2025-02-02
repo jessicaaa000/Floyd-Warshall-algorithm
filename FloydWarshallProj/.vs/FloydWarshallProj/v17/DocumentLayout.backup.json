@@ -3,47 +3,35 @@
   "WorkspaceRootPath": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07A63DB9-007B-4751-97D1-C9365176600B}|FloydWarshallAsm\\FloydWarshallAsm.vcxproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallAsm\\FloydWarshallAsm.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{07A63DB9-007B-4751-97D1-C9365176600B}|FloydWarshallAsm\\FloydWarshallAsm.vcxproj|solutionrelative:FloydWarshallAsm\\FloydWarshallAsm.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jessica\\AppData\\Local\\Temp\\.vsdbgsrc\\4201d6c4fad55f8f0b3a2cf2bd03e817544dc9f6786d8dbd32b26d8f9a6312f2\\FloydWarshallRunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|FloydWarshallProj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|c:\\projects\\floyd-warshall-algorithm\\floydwarshallproj\\floydwarshallproj\\floydwarshallrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\floydwarshallrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|FloydWarshallCs||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EE8586D-B47B-443B-AD01-87E9132A4918}|FloydWarshallCs\\FloydWarshallCs.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallcs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EE8586D-B47B-443B-AD01-87E9132A4918}|FloydWarshallCs\\FloydWarshallCs.csproj|solutionrelative:floydwarshallcs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|c:\\projects\\floyd-warshall-algorithm\\floydwarshallproj\\floydwarshallproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallproj\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallproj\\floydwarshallrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\floydwarshallrunner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|c:\\projects\\floyd-warshall-algorithm\\floydwarshallproj\\floydwarshallproj\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallproj\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A63DB9-007B-4751-97D1-C9365176600B}|FloydWarshallAsm\\FloydWarshallAsm.vcxproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallAsm\\FloydWarshallAsm.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{07A63DB9-007B-4751-97D1-C9365176600B}|FloydWarshallAsm\\FloydWarshallAsm.vcxproj|solutionrelative:FloydWarshallAsm\\FloydWarshallAsm.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|solutionrelative:floydwarshallproj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EE8586D-B47B-443B-AD01-87E9132A4918}|FloydWarshallCs\\FloydWarshallCs.csproj|c:\\projects\\floyd-warshall-algorithm\\floydwarshallproj\\floydwarshallcs\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|6185191f-1008-4fb2-a715-3a4e4f27e610"
+      "AbsoluteMoniker": "D:0:0:{3EE8586D-B47B-443B-AD01-87E9132A4918}|FloydWarshallCs\\FloydWarshallCs.csproj|C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\floydwarshallcs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EE8586D-B47B-443B-AD01-87E9132A4918}|FloydWarshallCs\\FloydWarshallCs.csproj|solutionrelative:floydwarshallcs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCD9C351-80EE-486E-8882-434B0E2BAB8E}|FloydWarshallProj\\FloydWarshallProj.csproj|c:\\projects\\floyd-warshall-algorithm\\floydwarshallproj\\floydwarshallproj\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|FloydWarshallCs||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,62 +41,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.cs",
+              "RelativeDocumentMoniker": "FloydWarshallProj\\Form1.cs",
+              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.cs",
+              "RelativeToolTip": "FloydWarshallProj\\Form1.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBoAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T12:04:53.617Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FloydWarshallProj",
-              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\FloydWarshallProj.csproj",
-              "RelativeDocumentMoniker": "FloydWarshallProj\\FloydWarshallProj.csproj",
-              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\FloydWarshallProj.csproj",
-              "RelativeToolTip": "FloydWarshallProj\\FloydWarshallProj.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-29T20:45:58.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FloydWarshallRunner.cs",
-              "DocumentMoniker": "C:\\Users\\Jessica\\AppData\\Local\\Temp\\.vsdbgsrc\\4201d6c4fad55f8f0b3a2cf2bd03e817544dc9f6786d8dbd32b26d8f9a6312f2\\FloydWarshallRunner.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\Users\\Jessica\\AppData\\Local\\Temp\\.vsdbgsrc\\4201d6c4fad55f8f0b3a2cf2bd03e817544dc9f6786d8dbd32b26d8f9a6312f2\\FloydWarshallRunner.cs",
-              "ToolTip": "C:\\Users\\Jessica\\AppData\\Local\\Temp\\.vsdbgsrc\\4201d6c4fad55f8f0b3a2cf2bd03e817544dc9f6786d8dbd32b26d8f9a6312f2\\FloydWarshallRunner.cs[Tylko do odczytu]",
-              "RelativeToolTip": "..\\..\\..\\Users\\Jessica\\AppData\\Local\\Temp\\.vsdbgsrc\\4201d6c4fad55f8f0b3a2cf2bd03e817544dc9f6786d8dbd32b26d8f9a6312f2\\FloydWarshallRunner.cs[Tylko do odczytu]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA4AAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T20:45:02.837Z",
-              "EditorCaption": "[Tylko do odczytu]"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FloydWarshallCs",
-              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallCs\\FloydWarshallCs.csproj",
-              "RelativeDocumentMoniker": "FloydWarshallCs\\FloydWarshallCs.csproj",
-              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallCs\\FloydWarshallCs.csproj",
-              "RelativeToolTip": "FloydWarshallCs\\FloydWarshallCs.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-29T19:11:57.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "FloydWarshallAsm.asm",
               "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallAsm\\FloydWarshallAsm.asm",
               "RelativeDocumentMoniker": "FloydWarshallAsm\\FloydWarshallAsm.asm",
               "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallAsm\\FloydWarshallAsm.asm",
               "RelativeToolTip": "FloydWarshallAsm\\FloydWarshallAsm.asm",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAACAb2ZmZmYEwB0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-01-29T18:18:10.377Z",
               "EditorCaption": ""
@@ -116,71 +76,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Program.cs",
+              "RelativeDocumentMoniker": "FloydWarshallProj\\Program.cs",
+              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Program.cs",
+              "RelativeToolTip": "FloydWarshallProj\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T08:54:58.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FloydWarshallCs",
+              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallCs\\FloydWarshallCs.csproj",
+              "RelativeDocumentMoniker": "FloydWarshallCs\\FloydWarshallCs.csproj",
+              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallCs\\FloydWarshallCs.csproj",
+              "RelativeToolTip": "FloydWarshallCs\\FloydWarshallCs.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-29T19:11:57.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FloydWarshallRunner.cs",
               "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\FloydWarshallRunner.cs",
               "RelativeDocumentMoniker": "FloydWarshallProj\\FloydWarshallRunner.cs",
               "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\FloydWarshallRunner.cs",
               "RelativeToolTip": "FloydWarshallProj\\FloydWarshallRunner.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAAAM4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T16:57:23.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Program.cs",
-              "RelativeDocumentMoniker": "FloydWarshallProj\\Program.cs",
-              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Program.cs",
-              "RelativeToolTip": "FloydWarshallProj\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T11:04:33.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.cs",
-              "RelativeDocumentMoniker": "FloydWarshallProj\\Form1.cs",
-              "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.cs",
-              "RelativeToolTip": "FloydWarshallProj\\Form1.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDEAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T12:04:53.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "FloydWarshallProj\\Form1.Designer.cs",
               "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.Designer.cs",
               "RelativeToolTip": "FloydWarshallProj\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAUGZmZmbuv3IAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T11:51:28.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallCs\\Class1.cs",
               "RelativeDocumentMoniker": "FloydWarshallCs\\Class1.cs",
               "ToolTip": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallCs\\Class1.cs",
               "RelativeToolTip": "FloydWarshallCs\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAACAzczMzMwXwBwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T10:07:44.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Projekt]",
               "DocumentMoniker": "C:\\projects\\Floyd-Warshall-algorithm\\FloydWarshallProj\\FloydWarshallProj\\Form1.cs",
               "RelativeDocumentMoniker": "FloydWarshallProj\\Form1.cs",

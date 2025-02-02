@@ -11,7 +11,7 @@ namespace FloydWarshallProj
 {
     public partial class Background : Form
     {
-        private int numOfThreads = 1;
+        private int numOfThreads = Environment.ProcessorCount;
         public Background()
         {
             InitializeComponent();
@@ -24,9 +24,72 @@ namespace FloydWarshallProj
             labelThreads.Text = "Threads: " + numOfThreads;
         }
 
+        private void buttonCSharp_Click(object sender, EventArgs e)
+        {
+            // Pobierz liczbę dostępnych wątków (procesorów logicznych)
+            int numOfThreads = Environment.ProcessorCount;
+
+            // Pobranie katalogu, w którym znajduje się plik wykonywalny (.exe)
+            string binDir = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Tworzymy poprawną ścieżkę do folderu TestFiles
+            string testFolderDir = Path.Combine(binDir, "TestFolder");
+
+            // Pobieramy nazwę pliku wybranego w ComboBox
+            string selectedFileName = this.comboBoxFilePath.Text;
+
+            // Tworzymy pełną ścieżkę do pliku
+            string filePath = Path.Combine(testFolderDir, selectedFileName);
+            FloydWarshallRunner runner = new FloydWarshallRunner();
+            label3.Text = "Liczba procesorów logicznych: " + numOfThreads.ToString();
+            // Teraz wywołujemy metodę na obiekcie klasy
+            runner.RunFloydWarshallCSharp(numOfThreads, filePath);
+            trackBar1.Value = numOfThreads;
+            labelThreads.Text = "Threads: " + numOfThreads;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Pobranie katalogu, w którym znajduje się plik wykonywalny (.exe)
+            string binDir = AppDomain.CurrentDomain.BaseDirectory;
 
+            // Tworzymy ścieżkę do folderu TestFolder w katalogu bin
+            string testFolderDir = Path.Combine(binDir, "TestFolder");
+
+            if (Directory.Exists(testFolderDir))
+            {
+                string[] files = Directory.GetFiles(testFolderDir, "*.txt"); // Pobiera tylko pliki .txt
+
+                foreach (string file in files)
+                {
+                    string fileName = Path.GetFileName(file);
+                    comboBoxFilePath.Items.Add(fileName);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Folder {testFolderDir} nie istnieje!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonAsm_Click(object sender, EventArgs e)
+        {
+            // Pobierz liczbę dostępnych wątków (procesorów logicznych)
+            int numOfThreads = Environment.ProcessorCount;
+            // Pobranie katalogu, w którym znajduje się plik wykonywalny (.exe)
+            string binDir = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Tworzymy poprawną ścieżkę do folderu TestFiles
+            string testFolderDir = Path.Combine(binDir, "TestFolder");
+
+            // Pobieramy nazwę pliku wybranego w ComboBox
+            string selectedFileName = this.comboBoxFilePath.Text;
+            // Tworzymy pełną ścieżkę do pliku
+            string filePath = Path.Combine(testFolderDir, selectedFileName);
+            FloydWarshallRunner runner = new FloydWarshallRunner();
+            label3.Text = "Liczba procesorów logicznych: " + numOfThreads.ToString();
+            // Teraz wywołujemy metodę na obiekcie klasy
+            runner.RunFloydWarshallAsm(numOfThreads, filePath);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,15 +109,13 @@ namespace FloydWarshallProj
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string filePath = this.textBoxFilePath.Text;
-            Task.Run(() => FloydWarshallRunner.Run(numOfThreads, filePath));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-        }
 
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 

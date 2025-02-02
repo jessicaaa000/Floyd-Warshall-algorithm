@@ -13,22 +13,20 @@ namespace FloydWarshallProj
 {
     internal class FloydWarshallRunner
     {
-        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll")]
+        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll")]
         static extern unsafe int InitializeRowAsm(int row, int vertices, int* address);
 
-        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Release\FloydWarshallAsm.dll")]
+        [DllImport(@"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\x64\Debug\FloydWarshallAsm.dll")]
         static extern unsafe int CalculateRowForKAsm(int* row, int* kRow, int k, int vertices, int* address);
 
         private static object _matrixLock = new object();
 
         [STAThread]
-        public static void Run(int numOfThreads, string filePath)
+        public void RunFloydWarshallCSharp(int numOfThreads, string filePath)
         {
             //DANE - do asm i do c#
-            //string filePath = @"C:\projects\Floyd-Warshall-algorithm\FloydWarshallProj\FloydWarshallProj\bin\x64\Debug\graph.txt";
             int vertices = GetVerticesCountFromFile(filePath);
             int[,] distanceMatrixCs = new int[vertices, vertices];
-            int[,] distanceMatrixAsm = new int[vertices, vertices];
 
             //CSHARP
 
@@ -143,23 +141,20 @@ namespace FloydWarshallProj
             Console.ReadLine();
             Console.WriteLine("\n");
 
+        }
 
-
-            //OBLICZENIA W ASM
-
-            //CSHARP
-
-            //inicjalizacja macierzy odleglosci - tu beda przechowywane wyniki CSHARP
-            //moze jakas funckja w asm
-
+            //ASM
+            public void RunFloydWarshallAsm(int numOfThreads, string filePath) { 
 
             //POMIARY
 
-            // Rozpoczęcie pomiaru czasu całkowitego
+        // Rozpoczęcie pomiaru czasu całkowitego
             Stopwatch totalTimeAsm = new Stopwatch();
             totalTimeAsm.Start();
 
             // Mierzenie czasu inicjalizacji
+            int vertices = GetVerticesCountFromFile(filePath);
+            int[,] distanceMatrixAsm = new int[vertices, vertices];
             Stopwatch initTimeAsm = new Stopwatch();
             initTimeAsm.Start();
 
@@ -291,7 +286,7 @@ namespace FloydWarshallProj
 
         }
 
-        private static void LoadDataFromFile(string filePath, ref int[,] matrix)
+        public void LoadDataFromFile(string filePath, ref int[,] matrix)
         {
             try
             {

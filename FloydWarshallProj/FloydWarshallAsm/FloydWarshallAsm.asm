@@ -52,7 +52,7 @@ VPBROADCASTD xmm2, xmm2 ;wartosc przez ktora sprawdzamy krotsze odcinki
 PADDD xmm2, xmm1   ; teraz w xmm2 mamy sumy odcinkow przez posredni wierzcholek
 MOVDQU xmm3, [RCX]  ;zapisujemy teraz do xmm3 wierzcholek, ktory bedzie zmieniany
 pminsd xmm3, xmm2
-MOVDQA [r10], xmm3
+MOVDQU [r10], xmm3
 add R12, 4 ;zwiekszamy liczbe przetworzonych wierzcholkow o 4
 add r10, 16
 add RDX, 16
